@@ -6,20 +6,20 @@ class OfferList extends Component {
 
     constructor() {
         super();
-        console.log("[ExpenceList] constructor");
+        console.log("[OffreList] constructor");
     }
 
     componentDidMount() {
-        console.log("[ExpenceList] componentDidMount");
+        console.log("[OfferList] componentDidMount");
     }
 
     componentWillUnmount() {
-        console.log("[ExpenceList] componentWillUnmount");
+        console.log("[OfferList] componentWillUnmount");
     }
 
     render() {
 
-        console.log("[ExpenceList] render");
+        console.log("[OfferList] render");
 
         let items = [
             { id : 1, name : "Book1", author : "Author1", description : "old" },
@@ -37,6 +37,8 @@ class OfferList extends Component {
                         <th>Name</th>
                         <th>Author</th>
                         <th>Description</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
