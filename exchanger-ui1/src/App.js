@@ -4,7 +4,8 @@ import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import OfferList from './pages/offers/OfferList';
 import RegistrationForm from './pages/account/RegistrationForm';
 import Notfound from './pages/common/NotFound';
-import ExpenseDetails from './pages/offers/OfferDetails';
+import OfferDetails from './pages/offers/OfferDetails';
+import CreateOffer from './pages/offers/CreateOffer';
 
 class App extends Component {
 
@@ -30,10 +31,17 @@ class App extends Component {
         <div>
           <Link to="/register">Register</Link>
         </div>
+        <div>
+          <Link to="/createOffer">Create offer</Link>
+        </div>
+        <div>
+          <Link to="/">Main page</Link>
+        </div>
         <Switch>
           <Route exact path="/" component={OfferList} />
           <Route path="/register" component={RegistrationForm} />
-          <Route path='/offer/:offerId' component={ExpenseDetails} />
+          <Route path="/createOffer" component={CreateOffer} />
+          <Route path='/offer/:offerId' component={OfferDetails} />
           <Route component={Notfound} />          
         </Switch>
       </div>
